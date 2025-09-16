@@ -37,11 +37,12 @@ public class LinkedListMultiSet extends MultiSet {
                 else {
                     this.front = curr.next;}
                 return;
-                }
+            }
             prev = curr;
             curr = curr.next;
-            }
         }
+    }
+
 
     public boolean contains(int item) {
         Node curr = front;
@@ -63,10 +64,11 @@ public class LinkedListMultiSet extends MultiSet {
         int numSeen = 0;
         Node curr = front;
         while (curr != null) {
-           if (curr.item == item) {
-               numSeen += 1;
-           }
-           curr = curr.next;
+            if (curr.item == item) {
+                numSeen += 1;
+            }
+            curr = curr.next;
+
         }
         return numSeen;
     }
@@ -75,3 +77,4 @@ public class LinkedListMultiSet extends MultiSet {
         return this.size;
     }
 }
+
