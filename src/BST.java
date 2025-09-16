@@ -72,7 +72,7 @@ public class BST {
             left.delete(item);
         }
         else {
-            right.delete();
+            right.delete(item);
         }
     }
 
@@ -114,7 +114,7 @@ public class BST {
         if (isEmpty()) {
             return 0;
         }
-        return Math.max(left.height(), right,height()) + 1;
+        return Math.max(left.height(), right.height()) + 1;
     }
 
     public int count(int item) {
